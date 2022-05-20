@@ -1,0 +1,409 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #88bdbc;
+  color: #254e58;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+body {    
+  margin: 0;
+  padding: 0;
+  text-align: center;
+ /* background-color: rgb(238, 135, 97);
+  background-image: url(../images/coverbackgrounddd.jpg);  
+  background-image: url(../images/pexels-tara-winstead-7111166.jpg);
+  background-position: center center;    
+  background-repeat: repeat;
+  background-size: cover; 
+  background-attachment: fixed;
+  color: rgb(107, 7, 7); */ 
+  /*background-size: cover;*/
+  background-color: #88bdbc;
+  color: #254e58;
+  /*background-color: #112d32;*/
+  
+  
+  
+  
+}
+
+header {  
+   
+  color: whitesmoke;
+  color: rgb(107, 7, 7);
+  color: #254e58;
+ 
+  /*background-color: rgba(238, 135, 97, .6);*/
+}
+
+.headernav {
+  display: flex; 
+  position: absolute;
+  top: 1.5em;
+  /*
+  right: 1.2em;*/
+  left: 40%;
+  font-size: 1.25em;
+}
+.headernav ul {
+  display: flex; 
+  
+}
+.headernav ul li {
+   list-style: none;  
+}
+
+.headernav ul li a {
+  text-decoration: none;
+  
+  color: #254e58;
+  font-size: 1.25;
+  padding: .7em;
+  text-align: center;
+}
+.headernav ul li a:hover {
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+  color: #022931;
+   
+}
+/* dropdown menu css */
+.dropdown {
+  position: relative;  
+  text-align: left;
+}
+.headernav ul li ul { 
+  position: absolute;
+  width: 100%;
+  left: -35%;     
+  padding: 0;
+  width: max-content;
+  background-color: transparent; 
+  background-color: #88bdbc; 
+  border: 1px solid #254e58;
+  border-radius: 5px;
+  overflow: auto;
+  display: none;    
+  z-index: 1;
+}
+
+.headernav ul li ul li{
+  /*border: 1px solid #254e58;  */
+  border: none;
+}
+ .headernav ul li ul li a {
+  text-align: left;
+  padding: 5px;
+  font-size: 1em;
+}
+
+.headernav ul li:hover ul {
+  display: block; 
+  overflow: hidden;
+  
+}
+.headernav ul li ul li {
+  display: flex;
+  justify-content: space-between;
+}
+.headernav ul li ul li a {
+  padding: 0 2em 0 2em;
+}
+
+@media only screen and (min-width: 280px) and (max-width: 480px) { 
+  .headernav ul {
+    display: none;
+  }
+  
+}
+@media only screen and (min-width: 480px) and (max-width: 568px) { 
+  .headernav ul {
+    display: none;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 1024px) { 
+  
+
+  .headernav ul li {
+    position: absolute;
+    right: .5em;
+
+  }
+  
+  .headernav {
+    display: flex; 
+    position: absolute;
+    top: 1.6em;
+    right: 1.2em;
+    font-size: 1.25em;
+  }
+}
+
+@media only screen and (min-width: 568px) and (max-width: 1024px) { 
+  .headernav ul:not(:first-child) {
+    display: none;
+  }
+  
+
+  
+}
+   
+
+/*iconbar css starts*/
+.iconbar {
+  position: absolute;
+  top: .9em;
+  left: .9em;
+  font-size: 1.7em;
+  color: #254e58;
+  
+} 
+.iconbar:hover {
+  cursor: pointer;
+  /*color: rgb(180, 175, 175);*/
+  color: #022931;
+  z-index: 1;
+}
+/*iconbar css ends*/
+
+
+/* brand-title css starts*/
+.brand-title {
+  position: absolute;
+  top: .9em;
+  left: 3.5em;
+  font-size: 25px;  
+  text-decoration: none;
+  color: #254e58;
+  font-weight: bolder;
+}
+
+body {background: #eee;}
+.swing {
+  animation: swing ease-in-out 1s infinite alternate;
+  transform-origin: center -20px;
+  float:left;
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+}
+.swing img {
+  border: none;
+  
+  display: block;
+}
+.swing:after{
+  content: '';
+  position: absolute;  
+  width: 20px; height: 20px;  
+  border: 1px solid #999;
+  top: -10px; left: 50%;
+  z-index: 0;
+  border-bottom: none;
+  border-right: none;
+  transform: rotate(45deg);
+}
+/* nail */
+.swing:before{
+  content: '';
+  position: absolute;
+  width: 5px; height: 5px;
+  top: -14px;left: 54%;
+  z-index: 5;
+  border-radius: 50% 50%;
+  background: #000;
+}
+
+@keyframes swing {
+  0% { transform: rotate(3deg); }
+  100% { transform: rotate(-3deg); }
+}
+@media only screen and (min-width: 280px) and (max-width: 568px) { 
+  .brand-title {
+    position: absolute;
+    top: .9em;
+    right: 2.5em;    
+    font-size: 25px;  
+    text-decoration: none;
+    color: whitesmoke;
+    font-weight: bolder;
+  }
+  .brand-title .swing  {
+    width: 95%;
+  }
+  .brand-title .swing img {
+    width: 100%;
+  }
+}
+
+
+@media only screen and (min-width: 568px) and (max-width: 768px) { 
+  .brand-title {
+    position: absolute;
+    top: .9em;
+    right: 3em;    
+    font-size: 25px;  
+    text-decoration: none;
+    color: whitesmoke;
+    font-weight: bolder;
+  }
+
+  
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) { 
+  .brand-title {
+    position: absolute;
+    top: .9em;
+    right: 4em;
+    font-size: 25px;  
+    text-decoration: none;
+    color: whitesmoke;
+    font-weight: bolder;
+  }
+}
+/* brand title css ends */
+
+
+/* sidenav css starts */
+.sidenav-parent {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100vh;
+  background-color: transparent;
+  /*background-color: #022931;*/
+  text-align: left;
+  
+  
+  
+}
+.sidenav-parent .sidenav {
+  width: 0;
+  height: 100vh;
+  display: block;
+  background-color: transparent;  
+  background-color: #88bdbc;
+  color: #254e58;
+  position: fixed;
+  z-index: 1;
+  overflow-x: auto; 
+  overflow-y: auto;
+  transition: 0.4s;
+  padding-top: 4em;
+  position: relative;
+  
+}
+.sidenav-parent .sidenav ul {
+  display: block;
+  width: 100%;  
+  
+}
+.sidenav-parent .sidenav ul li {
+  list-style: none; 
+  overflow: hidden; 
+  
+}
+.sidenav-parent .sidenav ul li a {
+  text-decoration: none;
+  color: #254e58;
+  font-size: 1.25em;
+  padding: 1.25em;
+  text-align: left;
+  
+}
+/*
+.signout-btn-list {    
+  padding-left: 1.25em;
+  background-color: aquamarine;
+}
+.item1 .sidenav-parent .sidenav ul li form {    
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  background-color: aqua;
+}
+*/
+.sidenav-parent .sidenav ul li form .signoutBtn {
+  margin: 0;
+  /*padding-left: 0;*/
+  padding-left: 1.25em;
+  text-align: left;
+  
+}
+.sidenav-parent .sidenav ul li a:hover {
+  color: #022931;
+}
+.sidenav-parent .sidenav ul li .closeBtn {
+  position: absolute;
+  top: -1em;
+  right: -.5em;
+  font-size: 2em;
+  font-weight: bolder;
+}
+.sidenav-parent .sidenav ul li .closeBtn:hover {
+  cursor: pointer;
+  color: #022931;
+}
+
+/* dropdown css for sidenav */
+.sidenav-parent .sidenav ul li ul {
+  padding: 0;
+  width: max-content;
+  background-color: rgba(238, 135, 97, .6);
+  background-color: #88bdbc;
+  overflow: auto;
+  display: none;
+  
+}
+  .sidenav-parent .sidenav ul li ul li {
+  border: 1px solid #254e58;
+}
+.sidenav-parent .sidenav ul li ul li a {
+  font-size: 1.25em;
+}
+  .sidenav-parent .sidenav ul li ul li a:hover {
+
+  color: #022931;
+
+}
+.sidenav-parent .sidenav ul li:hover ul {
+  display: block;
+}
+.signoutBtn {
+  background-color: transparent;
+  background-color: #88bdbc;
+  color: #254e58;
+  border: none;
+  outline: none;
+  font-size: 1.25em;
+}
+.signoutBtn:hover {
+  color: #022931;
+}
+
+
+/* sidenav css ends */
+

@@ -1,0 +1,68 @@
+main h1 {
+    padding-top: 1em;
+}
+.find-a-friend {
+    width: 33%;
+    height: auto;
+    margin: 4em auto 3em auto;
+    border: none;
+    border-radius: 5px;
+    background-color: white;
+    padding: 1em;
+    z-index: 1;
+    box-shadow: 5px 5px 5px #254e58;
+}
+.form-class {
+    width: 100%;
+    height: auto;
+    
+}
+.form-class input {
+    width: 90%;
+    height: auto;
+    margin: .5em auto .5em auto;
+    padding: .5em;
+    border: 1px solid #254e58;
+    border-radius: 5px;
+    outline: none;
+}
+.form-class button {
+    width: 90%;
+    height: auto;
+    margin: .5em auto .5em auto;
+    padding: .5em;
+    border: 1px solid #254e58;
+    border-radius: 5px;
+    outline: none;
+    background-color: #254e58;
+    color: #88bdbc;
+}
+.form-class button:hover {
+    cursor: pointer;
+}
+
+.find-a-friend a {
+    text-decoration: none;
+    color: #88bdbc;
+    margin: .5em auto .5em auto;
+}
+.find-a-friend a:hover {
+    text-decoration: underline;
+    color: #254e58;
+}
+
+.find-a-friend .create-account-button {
+    width: 60%;
+    height: auto;
+    margin: 1em auto 1em auto;
+    padding: .5em;
+    border: 1px solid lightgreen;
+    border-radius: 5px;
+    outline: none;
+    background-color: lightgreen;
+    color: white;
+}
+.find-a-friend .create-account-button:hover {
+    cursor: pointer;
+}
+

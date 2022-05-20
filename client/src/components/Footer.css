@@ -1,0 +1,19 @@
+/*footer {
+    width: 100%;
+    height: auto;
+    background-color: brown;
+    color: aliceblue;
+    padding: .5em;
+}
+*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+footer {
+    background-color: #88bdbc;
+    color: #254e58;
+}

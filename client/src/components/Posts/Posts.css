@@ -1,0 +1,22 @@
+
+.post-card-container {
+    width: 80%;
+    height: auto;
+   
+    margin: auto;
+    padding: 1em;
+    border: 5px solid brown;
+    border-radius: 8px;
+    z-index: 1;
+}
+.post-card-container .row {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+}
+.edit-button {
+    border: none;
+    background-color: transparent;
+    color: white;
+}
