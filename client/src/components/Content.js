@@ -6,7 +6,7 @@ import './Content.css';
 const Content = ({postData, setPostData, handleSubmit, handleClear, currentId, setCurrentId}) => {
   return (
     <main>
-        <h1>Content</h1>
+        {/* <h1>Content</h1> */}
         
         
         <Posts

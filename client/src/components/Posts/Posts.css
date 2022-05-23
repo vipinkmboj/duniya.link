@@ -1,3 +1,38 @@
+.memories-container {
+    width: 100%;
+    height: auto;
+    
+}
+.memories-container .row {
+    display: flex;
+}
+.memories-container .row .co-1 {
+    width: 33%;
+    height: auto;
+    
+}
+.memories-container .row .col-2 {
+    width: 66%;
+    height: auto;
+    
+    
+}
+
+.memories-container .row .col-2 ul {
+    list-style: none;
+    margin-top: 2em;
+}
+@media screen and (min-width: 280px) and (max-width: 480px) {
+    .memories-container .row {
+        display: block;
+    }
+    .memories-container .row .column {
+        width: 100%;
+    }
+}
+
+
+
 
 .post-card-container {
     width: 80%;
@@ -18,5 +53,8 @@
 .edit-button {
     border: none;
     background-color: transparent;
-    color: white;
+    color: #254e58;
+}
+.edit-button:hover {
+    cursor: pointer;
 }

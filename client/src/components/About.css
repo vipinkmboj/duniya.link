@@ -3,3 +3,7 @@ main {
     height: auto;
     min-height: 100vh;
 }
+main p {
+    padding: 2em;
+    text-align: left;
+}

@@ -148,12 +148,17 @@ const Header = () => {
               <a href="/trending">Trending</a>
             </li>
 
-            <li class="my-duniya">              
-              <a href="/myduniya">My Duniya</a>
+            <li class="dropdown my-duniya">
+              <a href="#">My Duniya</a>              
+              <ul>
+                <li>            
+                  <a href='/register'>Register</a>                                   
+                </li>
+                <li>                  
+                  <a href='/login'>Log in</a>                  
+                </li>
+              </ul>
             </li>
-            
-            
-
           </ul>
           
         </div>

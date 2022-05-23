@@ -4,15 +4,19 @@ import Form from '../../Form/Form'
 import ThumbUpAltIcon from '@material-ui/icons/ThumbUpAlt'
 import DeleteIcon from '@material-ui/icons/Delete'
 import MoreHorizIcon from '@material-ui/icons/MoreHoriz'*/
-const Post = ({postData, setPostData, handleSubmit}) => {
+const Post = ({postData, setPostData, handleSubmit, handleClear, currentId, setCurrentId}) => {
   return (
     <>
-        <h1>Post</h1>
+        {/* <h2>Post</h2> */}
       
         <Form
           postData={postData}
           setPostData={setPostData}
           handleSubmit={handleSubmit}
+          handleClear={handleClear}
+          
+          currentId={currentId}
+          setCurrentId={setCurrentId}
         />
     </>
   )

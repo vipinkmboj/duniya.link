@@ -3,15 +3,30 @@ import './Posts.css'
 import Post from './Post/Post'
 import { useSelector } from 'react-redux'
 import moment from 'moment';
-const Posts = ({postData, setPostData, handleSubmit, currentId, setCurrentId}) => {
+const Posts = ({postData, setPostData, handleSubmit, handleClear, currentId, setCurrentId}) => {
   const posts = useSelector((state) => state.posts);
 
     console.log(posts);
 
   return (
     <>
-        <h1>Posts</h1>
-        <ul>
+        <h2>Memories</h2>
+        <div className='memories-container'>          
+          <div className='row'>
+            <div className='column col-1'>
+                  <Post
+                posts={posts}
+                postData={postData}
+                setPostData={setPostData}
+                handleSubmit={handleSubmit}
+                handleClear={handleClear}
+
+                currentId={currentId}
+                setCurrentId={setCurrentId}
+              />
+            </div>
+            <div className='column col-2'>
+            <ul>
         {posts.map((post) => (
           <li >
             <div className='post-card-container'>
@@ -21,7 +36,7 @@ const Posts = ({postData, setPostData, handleSubmit, currentId, setCurrentId}) =
                   <h4>{moment(post.CreatedAt).fromNow()}</h4>
                 </div>
                 <div className='column col-2'>
-                  <button onClick={() => {}} className='edit-button'><h3>...</h3></button>
+                  <button onClick={() => setCurrentId(post._id)} className='edit-button'><h2>...</h2></button>
                 </div>
               </div>
               <div className='row row-2'>
@@ -44,18 +59,20 @@ const Posts = ({postData, setPostData, handleSubmit, currentId, setCurrentId}) =
                 </div>
               </div>
             </div>
-
-            {post.Creator}
-          </li>          
-        ))}
+            <br/>            
+          </li> 
+                   
+        )).reverse()}
         </ul>
+            </div>
+            
+          </div>
+        </div>
+        <br/>
         
-        <Post
-          posts={posts}
-          postData={postData}
-          setPostData={setPostData}
-          handleSubmit={handleSubmit}
-        />
+        
+        
+        
     </>
   )
 }

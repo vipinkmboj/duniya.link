@@ -6,7 +6,7 @@ import Nav from './components/Nav';
 import Content from './components/Content';
 import Footer from './components/Footer';
 import { useDispatch} from 'react-redux';
-import { getPosts, createPost } from './actions/posts';
+import { getPosts, createPost, updatePost } from './actions/posts';
 import {Routes, Route, useNavigate} from 'react-router-dom';
 import Home from './components/Home';
 import About from './components/About';
@@ -25,6 +25,7 @@ import Favourites from './components/Favourites';
 import Trending from './components/Trending';
 import MyDuniya from './components/MyDuniya';
 import Contact from './components/Contact';
+//import { updatePost } from '../../server/controllers/posts';
 function App() {
 
   //
@@ -46,7 +47,26 @@ function App() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    dispatch(createPost(postData))
+    if(currentId) {
+      dispatch(updatePost(currentId, postData))
+    } else {
+      dispatch(createPost(postData))
+
+    }
+    handleClear();
+    //dispatch(createPost(postData))
+    /*setPostData({
+      Creator: '', 
+    Title: '',
+    Message: '',
+    Tags: '',
+    SelectedFile: ''
+    });
+    */
+  }
+
+  const handleClear = () => {
+    setCurrentId(null);
     setPostData({
       Creator: '', 
     Title: '',
@@ -54,10 +74,6 @@ function App() {
     Tags: '',
     SelectedFile: ''
     });
-  }
-
-  const handleClear = () => {
-
   }
   //
   //
@@ -162,6 +178,7 @@ function App() {
             postData={postData}
             setPostData={setPostData}
             handleSubmit={handleSubmit}
+            handleClear={handleClear}
           />            
           }
        />

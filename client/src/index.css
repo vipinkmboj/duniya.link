@@ -96,6 +96,7 @@ header {
 .headernav ul li ul { 
   position: absolute;
   width: 100%;
+  height: auto;
   left: -35%;     
   padding: 0;
   width: max-content;
@@ -164,8 +165,32 @@ header {
   .headernav ul:not(:first-child) {
     display: none;
   }
-  
 
+  .headernav ul li:hover ul {
+    display: block; 
+    overflow: hidden;
+    
+  }
+  .dropdown {
+    position: relative;  
+    text-align: left;
+  }
+  .headernav ul li ul { 
+    position: absolute;
+    width: 100%;
+    height: auto;
+    right: 35%;     
+    padding: 0;
+    width: max-content;
+    background-color: transparent; 
+    background-color: #88bdbc; 
+    border: 1px solid #254e58;
+    border-radius: 5px;
+    overflow: auto;
+    display: none;    
+    z-index: 1;
+  }
+  
   
 }
    

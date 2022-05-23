@@ -5,6 +5,7 @@ import cors from 'cors'
 import env from 'dotenv';
 import postRoutes from './routes/posts.js'
 
+
 const app = express();
 
 //require('dotenv').config(); use import instead of require

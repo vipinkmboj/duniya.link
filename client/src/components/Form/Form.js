@@ -1,11 +1,16 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import FileBase from 'react-file-base64';
+import { useSelector } from 'react-redux';
 
-const Form = ({postData, setPostData, handleSubmit, handleClear}) => {
+const Form = ({postData, setPostData, handleSubmit, handleClear, currentId, setCurrentId }) => {
+  const post = useSelector((state) => currentId ? state.posts.find((p) => p._id === currentId) : null);
+  useEffect(() => {
+    if(post) setPostData(post)
+  }, [currentId, post])
   return (
     <>
-        <h1>Form</h1>
-        <form className='postForm' onSubmit={handleSubmit}>
+        <h2>{currentId ? 'Edit Memory' : 'Create Memory'}</h2>
+        <form className='postForm form-class' onSubmit={handleSubmit}>
         <label>Creator</label><br/>
         <input 
           name='creator'
@@ -19,7 +24,7 @@ const Form = ({postData, setPostData, handleSubmit, handleClear}) => {
           type='text'
           value={postData.Title}
           onChange={(e) => setPostData({...postData, Title: e.target.value})}
-        /><br/>
+        /><br/> 
          <label>Message</label><br/>
         <input 
           name='message'
@@ -44,7 +49,7 @@ const Form = ({postData, setPostData, handleSubmit, handleClear}) => {
 
         <button type='submit'>Submit Post</button>
         <br/>
-        <button type='submit' onClick={handleClear}>Clear</button>
+        <button type='button' onClick={handleClear}>Clear</button>
 
         </form>
         
